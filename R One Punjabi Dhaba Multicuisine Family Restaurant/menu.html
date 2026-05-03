@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Menu - R1 Punjabi Dhaba</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body class="menu-page">
+
+    <!-- Header -->
+    <header class="menu-header">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+        <h1>Full Menu</h1>
+        <div class="cart-icon-header" onclick="toggleCartModal()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge" id="header-cart-badge">0</span>
+        </div>
+    </header>
+
+    <!-- Scrollable Category Navigation -->
+    <div class="category-nav-wrapper">
+        <div class="category-tabs" id="category-tabs">
+            <a href="#biryani" class="tab active" data-target="biryani">Biryani</a>
+            <a href="#north-indian" class="tab" data-target="north-indian">North Indian</a>
+            <a href="#starters" class="tab" data-target="starters">Starters</a>
+            <a href="#tandoori" class="tab" data-target="tandoori">Tandoori</a>
+            <a href="#chinese" class="tab" data-target="chinese">Chinese</a>
+            <a href="#breads" class="tab" data-target="breads">Breads</a>
+        </div>
+    </div>
+
+    <!-- Menu Container -->
+    <div class="menu-container">
+        
+        <!-- Category: Biryani -->
+        <section id="biryani" class="menu-section">
+            <h2 class="section-title">Biryani</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-id="b1" data-name="Chicken Dum Biryani" data-price="299">
+                    <div class="item-info">
+                        <div class="veg-indicator non-veg"><i class="fas fa-circle"></i></div>
+                        <h3>Chicken Dum Biryani</h3>
+                        <p class="price">₹299</p>
+                        <p class="desc">Authentic slow-cooked chicken dum biryani with rich spices, served with raita.</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="img-wrapper">
+                            <img src="images/biryani_1777648298008.png" alt="Biryani">
+                        </div>
+                        <div class="add-controls" id="controls-b1">
+                            <button class="btn-add-init" onclick="addToCart('b1')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-id="b2" data-name="Mutton Handi Biryani" data-price="399">
+                    <div class="item-info">
+                        <div class="veg-indicator non-veg"><i class="fas fa-circle"></i></div>
+                        <h3>Mutton Handi Biryani</h3>
+                        <p class="price">₹399</p>
+                        <p class="desc">Tender mutton pieces layered with fragrant basmati rice in a traditional handi.</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="add-controls" id="controls-b2">
+                            <button class="btn-add-init" onclick="addToCart('b2')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: North Indian -->
+        <section id="north-indian" class="menu-section">
+            <h2 class="section-title">North Indian</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-id="ni1" data-name="Butter Chicken" data-price="349">
+                    <div class="item-info">
+                        <div class="veg-indicator non-veg"><i class="fas fa-circle"></i></div>
+                        <h3>Butter Chicken</h3>
+                        <p class="price">₹349</p>
+                        <p class="desc">Smoky tandoori chicken simmered in a luscious tomato, butter, and cream gravy.</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="img-wrapper">
+                            <img src="images/north_indian_1777648313939.png" alt="Butter Chicken">
+                        </div>
+                        <div class="add-controls" id="controls-ni1">
+                            <button class="btn-add-init" onclick="addToCart('ni1')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-id="ni2" data-name="Paneer Butter Masala" data-price="289">
+                    <div class="item-info">
+                        <div class="veg-indicator veg"><i class="fas fa-circle"></i></div>
+                        <h3>Paneer Butter Masala</h3>
+                        <p class="price">₹289</p>
+                        <p class="desc">Soft paneer cubes cooked in a rich and creamy onion-tomato gravy.</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="add-controls" id="controls-ni2">
+                            <button class="btn-add-init" onclick="addToCart('ni2')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Starters -->
+        <section id="starters" class="menu-section">
+            <h2 class="section-title">Starters</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-id="s1" data-name="Paneer Tikka" data-price="249">
+                    <div class="item-info">
+                        <div class="veg-indicator veg"><i class="fas fa-circle"></i></div>
+                        <h3>Paneer Tikka</h3>
+                        <p class="price">₹249</p>
+                        <p class="desc">Soft paneer cubes marinated in yogurt and spices, grilled to perfection.</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="add-controls" id="controls-s1">
+                            <button class="btn-add-init" onclick="addToCart('s1')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Tandoori -->
+        <section id="tandoori" class="menu-section">
+            <h2 class="section-title">Tandoori</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-id="t1" data-name="Tandoori Chicken" data-price="299">
+                    <div class="item-info">
+                        <div class="veg-indicator non-veg"><i class="fas fa-circle"></i></div>
+                        <h3>Tandoori Chicken</h3>
+                        <p class="price">₹299</p>
+                        <p class="desc">Classic bone-in chicken roasted in a traditional clay oven. Served with mint chutney.</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="img-wrapper">
+                            <img src="images/tandoori_1777648349359.png" alt="Tandoori">
+                        </div>
+                        <div class="add-controls" id="controls-t1">
+                            <button class="btn-add-init" onclick="addToCart('t1')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Chinese -->
+        <section id="chinese" class="menu-section">
+            <h2 class="section-title">Chinese</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-id="c1" data-name="Chilli Chicken" data-price="269">
+                    <div class="item-info">
+                        <div class="veg-indicator non-veg"><i class="fas fa-circle"></i></div>
+                        <h3>Chilli Chicken</h3>
+                        <p class="price">₹269</p>
+                        <p class="desc">Crispy chicken tossed in spicy soy and garlic sauce with bell peppers.</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="img-wrapper">
+                            <img src="images/chinese_1777648333157.png" alt="Chinese">
+                        </div>
+                        <div class="add-controls" id="controls-c1">
+                            <button class="btn-add-init" onclick="addToCart('c1')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category: Breads -->
+        <section id="breads" class="menu-section" style="padding-bottom: 100px;">
+            <h2 class="section-title">Breads</h2>
+            <div class="menu-items">
+                <div class="menu-item" data-id="br1" data-name="Garlic Naan" data-price="60">
+                    <div class="item-info">
+                        <div class="veg-indicator veg"><i class="fas fa-circle"></i></div>
+                        <h3>Garlic Naan</h3>
+                        <p class="price">₹60</p>
+                        <p class="desc">Soft flatbread topped with minced garlic and butter.</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="add-controls" id="controls-br1">
+                            <button class="btn-add-init" onclick="addToCart('br1')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item" data-id="br2" data-name="Butter Naan" data-price="50">
+                    <div class="item-info">
+                        <div class="veg-indicator veg"><i class="fas fa-circle"></i></div>
+                        <h3>Butter Naan</h3>
+                        <p class="price">₹50</p>
+                    </div>
+                    <div class="item-action">
+                        <div class="add-controls" id="controls-br2">
+                            <button class="btn-add-init" onclick="addToCart('br2')">ADD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Sticky Cart Bar -->
+    <div class="sticky-cart-bar" id="sticky-cart">
+        <div class="cart-summary">
+            <div class="cart-summary-text">
+                <span id="sticky-item-count" class="item-count">0 items</span>
+                <span id="sticky-total-price" class="total-price">₹0</span>
+            </div>
+        </div>
+        <button class="btn-view-cart" onclick="toggleCartModal()">View Cart <i class="fas fa-caret-up"></i></button>
+    </div>
+
+    <!-- Cart Modal Overlay -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCartModal()"></div>
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2>Your Order</h2>
+            <button class="close-cart" onclick="toggleCartModal()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items-wrapper">
+            <div id="empty-cart-msg" class="empty-cart">
+                <i class="fas fa-shopping-basket"></i>
+                <p>Your cart is empty</p>
+            </div>
+            <div class="cart-items" id="cart-items-container">
+                <!-- Items injected here -->
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="bill-details">
+                <div class="bill-row">
+                    <span>Item Total</span>
+                    <span id="modal-item-total">₹0</span>
+                </div>
+                <div class="bill-row grand-total">
+                    <span>Grand Total</span>
+                    <span id="modal-grand-total">₹0</span>
+                </div>
+            </div>
+            <button class="btn-checkout" onclick="checkout()">Order via WhatsApp <i class="fab fa-whatsapp" style="font-size: 1.2rem; margin-left: 0.5rem;"></i></button>
+        </div>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>
